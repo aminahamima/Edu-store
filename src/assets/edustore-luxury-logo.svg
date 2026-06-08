@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" width="520" height="200" role="img" aria-label="edustore">
+  <!-- Optional print backdrop: uncomment for white backing -->
+  <!-- <rect width="520" height="200" fill="#FFFFFF"/> -->
+
+  <defs>
+    <linearGradient id="goldSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8D5A3"/>
+      <stop offset="45%" stop-color="#C9A227"/>
+      <stop offset="100%" stop-color="#9A7429"/>
+    </linearGradient>
+    <linearGradient id="goldFlame" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F0E4BF"/>
+      <stop offset="100%" stop-color="#B8923D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Center of mark: x=175 (icon block ~150 wide, left-padded for text balance) -->
+  <g transform="translate(0, 6)">
+    <g transform="translate(168, 100)">
+      <!-- Symmetrical open book: mirrored strokes, single spine -->
+      <g fill="none" stroke="#5C1520" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Left page -->
+        <path d="M 0 28 C -32 12 -52 -8 -58 -32 C -62 -48 -54 -58 -38 -54 C -22 -50 -8 -38 0 -24"/>
+        <!-- Right page (mirror) -->
+        <path d="M 0 28 C 32 12 52 -8 58 -32 C 62 -48 54 -58 38 -54 C 22 -50 8 -38 0 -24"/>
+        <!-- Spine / gutter -->
+        <path d="M 0 28 L 0 -20" stroke-width="2.8"/>
+        <path d="M -12 32 Q 0 38 12 32" stroke-width="2"/>
+      </g>
+
+      <!-- Digital rocket: centered on x=0 -->
+      <g transform="translate(0, -18)">
+        <!-- Body -->
+        <path fill="none" stroke="#5C1520" stroke-width="2.2" stroke-linejoin="round"
+              d="M 0 -58 L -7 -38 L -7 8 L 7 8 L 7 -38 Z"/>
+        <!-- Nose cone accent -->
+        <path fill="url(#goldSheen)" stroke="#5C1520" stroke-width="1.2"
+              d="M 0 -64 L -9 -45 L 9 -45 Z"/>
+        <!-- Gold fin highlights (symmetrical) -->
+        <path fill="none" stroke="url(#goldSheen)" stroke-width="1.8" stroke-linecap="round"
+              d="M -7 -20 L -18 -8 M 7 -20 L 18 -8"/>
+        <!-- Digital window / pixel detail -->
+        <rect x="-3" y="-32" width="6" height="6" rx="0.8" fill="none" stroke="#C9A227" stroke-width="1.4"/>
+        <line x1="-1" y1="-30" x2="1" y2="-28" stroke="#C9A227" stroke-width="0.9"/>
+        <!-- Launch flame / trail (gold) -->
+        <path fill="url(#goldFlame)" opacity="0.95"
+              d="M -5 8 Q 0 22 5 8 L 3 8 L 0 18 L -3 8 Z"/>
+        <path fill="none" stroke="#C9A227" stroke-width="1.3" stroke-linecap="round"
+              d="M 0 10 L 0 26 M -4 14 L 0 24 L 4 14"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Wordmark: stationery serif, wine + espresso -->
+  <text x="332" y="108" text-anchor="middle"
+        font-family="Palatino Linotype, Book Antiqua, Palatino, Georgia, serif"
+        font-size="36" font-style="normal">
+    <tspan fill="#5C1520" font-weight="600" letter-spacing="0.04em">edu</tspan><tspan fill="#3D2C1E" font-weight="500" letter-spacing="0.1em">store</tspan>
+  </text>
+  <!-- Gold rule, width tied to wordmark -->
+  <line x1="248" y1="122" x2="416" y2="122" stroke="url(#goldSheen)" stroke-width="1.75" stroke-linecap="round"/>
+  <text x="332" y="152" text-anchor="middle"
+        font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"
+        font-size="9.5" font-weight="600" letter-spacing="0.28em" fill="#5C4A3A">
+    BIBLIOTH&#232;QUE EN LIGNE
+  </text>
+</svg>

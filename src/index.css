@@ -1,13 +1,287 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Apple Color Emoji', 'Segoe UI Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f6f7fb;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --edu-primary: #5c1520;
+  --edu-primary-2: #7a2840;
+  --edu-ink: #1b1020;
+  --edu-muted: #6b7280;
+  --edu-card: #ffffff;
+  --edu-soft: rgba(92, 21, 32, 0.12);
+  --edu-border: rgba(17, 24, 39, 0.12);
+  --edu-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+}
+
+.edu-text-accent {
+  color: var(--edu-primary) !important;
+}
+
+.edu-link-accent {
+  color: var(--edu-primary);
+}
+
+.edu-link-accent:hover {
+  color: var(--edu-primary-2);
+}
+
+.edu-input:focus {
+  border-color: rgba(92, 21, 32, 0.45) !important;
+  box-shadow: 0 0 0 0.25rem rgba(92, 21, 32, 0.18) !important;
+}
+
+.edu-spinner {
+  color: var(--edu-primary) !important;
+}
+
+.edu-btn-accent {
+  background: linear-gradient(135deg, var(--edu-primary), var(--edu-primary-2)) !important;
+  border: none !important;
+  box-shadow: 0 10px 24px rgba(92, 21, 32, 0.22);
+}
+
+.edu-btn-accent:hover {
+  filter: brightness(1.02);
+  transform: translateY(-1px);
+}
+
+.edu-btn-soft {
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.edu-btn-solid {
+  color: var(--edu-ink) !important;
+}
+
+.edu-navbar {
+  background: radial-gradient(1200px 420px at 20% -20%, rgba(255, 255, 255, 0.18), transparent 50%),
+    linear-gradient(135deg, rgba(27, 16, 32, 0.96), rgba(92, 21, 32, 0.9));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.edu-brand-mark {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+.edu-brand-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.edu-brand-tagline {
+  margin-left: 8px;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.24);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.edu-hero {
+  position: relative;
+  color: white;
+  background: radial-gradient(900px 420px at 78% 25%, rgba(255, 255, 255, 0.18), transparent 55%),
+    linear-gradient(135deg, rgba(27, 16, 32, 1), rgba(92, 21, 32, 0.92));
+  overflow: hidden;
+}
+
+.edu-hero-wave {
+  height: 90px;
+  background: linear-gradient(to bottom, transparent, #f6f7fb);
+}
+
+.edu-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.edu-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.12);
+}
+
+.edu-hero-art {
+  position: relative;
+  margin: 0 auto;
+  width: min(560px, 100%);
+  aspect-ratio: 26 / 10;
+  border-radius: 24px;
+  background: radial-gradient(420px 200px at 50% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+  display: grid;
+  place-items: center;
+  padding: 12px 16px;
+}
+
+.edu-hero-logo {
+  width: min(100%, 480px);
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 36px rgba(0, 0, 0, 0.22));
+  animation: eduFloat 5.5s ease-in-out infinite;
+}
+
+.edu-cta {
+  background: radial-gradient(900px 420px at 15% 0%, rgba(255, 255, 255, 0.12), transparent 55%),
+    linear-gradient(135deg, rgba(92, 21, 32, 0.96), rgba(27, 16, 32, 0.96));
+  box-shadow: var(--edu-shadow);
+}
+
+.edu-card {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--edu-shadow);
+}
+
+.edu-card-media {
+  height: 160px;
+  background: linear-gradient(135deg, rgba(92, 21, 32, 0.10), rgba(27, 16, 32, 0.06));
+}
+
+.edu-detail-media {
+  height: 350px;
+  font-size: 92px;
+  background: linear-gradient(135deg, rgba(92, 21, 32, 0.12), rgba(27, 16, 32, 0.06));
+}
+
+.edu-soft-panel {
+  background: linear-gradient(135deg, rgba(92, 21, 32, 0.12), rgba(27, 16, 32, 0.06));
+  border: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.edu-cat-card {
+  cursor: pointer;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.edu-cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--edu-shadow);
+}
+
+.edu-auth-card {
+  overflow: hidden;
+}
+
+.edu-auth-logo {
+  width: min(100%, 300px);
+  height: auto;
+  max-height: 118px;
+  object-fit: contain;
+}
+
+.edu-pay-card {
+  border-color: rgba(92, 21, 32, 0.55) !important;
+}
+
+.edu-badge-accent {
+  background: linear-gradient(135deg, var(--edu-primary), var(--edu-primary-2));
+}
+
+.edu-footer {
+  background: linear-gradient(135deg, rgba(27, 16, 32, 1), rgba(92, 21, 32, 0.9));
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.edu-footer-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
+}
+
+.edu-footer-link {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+}
+
+.edu-footer-link:hover {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: underline;
+}
+
+.edu-footer-sep {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.edu-reveal {
+  animation: eduReveal 520ms ease both;
+}
+
+@keyframes eduReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes eduFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edu-hero-logo,
+  .edu-reveal,
+  .edu-card,
+  .edu-cat-card,
+  .edu-btn-accent:hover {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Dashboard seul : tableau « commandes récentes » façon wireframe */
+.edu-admin-dashboard-panel .table thead.table-secondary th {
+  font-weight: 600;
 }
